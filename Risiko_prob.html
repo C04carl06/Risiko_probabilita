@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risiko! Calcolatore Probabilità</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Risiko! Battle Odds 🛡️</h1>
+        <p class="subtitle">Seleziona le armate per scoprire le probabilità di vittoria e le perdite medie.</p>
+        
+        <div class="selectors">
+            <div class="input-group attack">
+                <label for="attack-armies">Armate Attacco (1-50)</label>
+                <input type="number" id="attack-armies" min="1" max="50" value="3">
+            </div>
+            
+            <div class="input-group defense">
+                <label for="defense-armies">Armate Difesa (1-50)</label>
+                <input type="number" id="defense-armies" min="1" max="50" value="3">
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Caricamento dati in corso...</div>
+
+        <div id="results" class="results-box hidden">
+            <div class="result-card att-card">
+                <h3>Esito Attacco</h3>
+                <p>Vittoria: <span id="att-win" class="highlight">0%</span></p>
+                <p>Perdite Medie: <span id="att-lost">0</span> armate</p>
+            </div>
+            
+            <div class="result-card def-card">
+                <h3>Esito Difesa</h3>
+                <p>Vittoria: <span id="def-win" class="highlight">0%</span></p>
+                <p>Perdite Medie: <span id="def-lost">0</span> armate</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
